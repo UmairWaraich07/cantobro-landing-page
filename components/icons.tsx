@@ -1,4 +1,9 @@
-export const FacebookIcon = ({ className, ...rest }) => (
+import { SVGProps } from "react";
+
+export const FacebookIcon: React.FC<SVGProps<SVGSVGElement>> = ({
+  className,
+  ...rest
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -17,7 +22,10 @@ export const FacebookIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const InstagramIcon = ({ className, ...rest }) => (
+export const InstagramIcon: React.FC<SVGProps<SVGSVGElement>> = ({
+  className,
+  ...rest
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -32,7 +40,10 @@ export const InstagramIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const YouTubeIcon = ({ className, ...rest }) => (
+export const YouTubeIcon: React.FC<SVGProps<SVGSVGElement>> = ({
+  className,
+  ...rest
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -47,7 +58,10 @@ export const YouTubeIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const TwitterIcon = ({ className, ...rest }) => (
+export const TwitterIcon: React.FC<SVGProps<SVGSVGElement>> = ({
+  className,
+  ...rest
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={20}
@@ -63,7 +77,10 @@ export const TwitterIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const AppleIcon = ({ className, ...rest }) => (
+export const AppleIcon: React.FC<SVGProps<SVGSVGElement>> = ({
+  className,
+  ...rest
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={15}

@@ -5,7 +5,9 @@ import React from "react";
 import logo from "../public/logo.png";
 import { FacebookIcon, InstagramIcon, TwitterIcon, YouTubeIcon } from "./icons";
 
-const Footer = () => {
+type Props = {};
+
+const Footer = (props: Props) => {
   return (
     <footer className="w-full bg-dark">
       <div className="w-[95%] tablet:w-[90%] max-w-[1400px] m-auto py-12 text-center tablet:text-left">
@@ -23,25 +25,25 @@ const Footer = () => {
             href={""}
             className="px-8 border-r-[1px] text-white border-r-white"
           >
-            <FacebookIcon />
+            <FacebookIcon className={""} />
           </Link>
           <Link
             href={"#"}
             className="px-8 border-r-[1px] text-white border-r-white"
           >
-            <InstagramIcon />
+            <InstagramIcon className={""} />
           </Link>
           <Link
             href={"#"}
             className="px-8 border-r-[1px] text-white border-r-white"
           >
-            <TwitterIcon />
+            <TwitterIcon className={""} />
           </Link>
           <Link
             href={"#"}
             className="px-8 border-r-0 text-white border-r-white"
           >
-            <YouTubeIcon />
+            <YouTubeIcon className={""} />
           </Link>
         </div>
 

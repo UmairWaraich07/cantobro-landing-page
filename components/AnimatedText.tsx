@@ -28,7 +28,15 @@ const singleWord = {
   },
 };
 
-function AnimatedText({ text, className = "" }) {
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+}
+
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+  text,
+  className = "",
+}) => {
   return (
     <div className="w-full mx-auto flex items-center justify-center text-center overflow-hidden py-2 sm:py-0">
       <motion.h1
@@ -49,6 +57,6 @@ function AnimatedText({ text, className = "" }) {
       </motion.h1>
     </div>
   );
-}
+};
 
 export default AnimatedText;

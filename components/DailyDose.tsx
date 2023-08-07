@@ -4,7 +4,8 @@ import React from "react";
 import phone from "../public/daily-dose.png";
 import { motion } from "framer-motion";
 
-const DailyDose = () => {
+type Props = {};
+const DailyDose = (props: Props) => {
   return (
     <section
       id="dailydose"

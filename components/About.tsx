@@ -1,11 +1,16 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import checkbox from "../public/checkbox-circle-fill.png";
 import aboutImg from "../public/about-img.png";
 import { motion } from "framer-motion";
 
-const Features = ({ img, title, description }) => {
+interface FeaturesProps {
+  img: StaticImageData;
+  title: string;
+  description: string;
+}
+const Features: React.FC<FeaturesProps> = ({ img, title, description }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -23,7 +28,9 @@ const Features = ({ img, title, description }) => {
   );
 };
 
-const About = () => {
+type Props = {};
+
+const About = (props: Props) => {
   return (
     <section
       id="about"

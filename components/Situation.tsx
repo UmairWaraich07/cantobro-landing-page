@@ -5,7 +5,9 @@ import img1 from "../public/situation1-img.png";
 import img2 from "../public/situation2-img.png";
 import { motion } from "framer-motion";
 
-const Situation = () => {
+type Props = {};
+
+const Situation = (props: Props) => {
   return (
     <section
       id="situations"

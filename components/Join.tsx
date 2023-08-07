@@ -6,7 +6,9 @@ import playstore from "../public/google-play-store.png";
 import apple from "../public/icons8-apple-logo-50.png";
 import { motion } from "framer-motion";
 
-const Join = () => {
+type Props = {};
+
+const Join = (props: Props) => {
   return (
     <section
       id="join"

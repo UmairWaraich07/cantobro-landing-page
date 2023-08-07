@@ -5,7 +5,9 @@ import Hero from "@/components/Hero";
 import Join from "@/components/Join";
 import Situation from "@/components/Situation";
 
-export default function Home() {
+type Props = {};
+
+const Home = (props: Props) => {
   return (
     <main className="font-jose min-h-screen ">
       <Hero />
@@ -16,4 +18,5 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+export default Home;

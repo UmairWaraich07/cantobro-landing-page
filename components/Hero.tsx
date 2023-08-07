@@ -8,7 +8,9 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "./AnimatedText";
 
-const Hero = () => {
+type Props = {};
+
+const Hero = (props: Props) => {
   return (
     <section
       id="home"

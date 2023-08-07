@@ -5,7 +5,19 @@ import logo from "../public/logo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const CustomLink = ({ href, title, className, active }) => {
+interface CustomLinkProps {
+  href: string;
+  title: string;
+  className: string;
+  active: string | undefined;
+}
+
+const CustomLink: React.FC<CustomLinkProps> = ({
+  href,
+  title,
+  className,
+  active,
+}) => {
   return (
     <Link href={`${href}`} className={`${className} relative group uppercase`}>
       {title}
@@ -19,7 +31,15 @@ const CustomLink = ({ href, title, className, active }) => {
   );
 };
 
-const CustomMobileLink = ({
+interface CustomMobileLinkProps {
+  href: string;
+  title: string;
+  className: string;
+  toggle: () => void;
+  active?: string;
+}
+
+const CustomMobileLink: React.FC<CustomMobileLinkProps> = ({
   href,
   title,
   className,
@@ -46,7 +66,9 @@ const CustomMobileLink = ({
   );
 };
 
-const Navbar = () => {
+type Props = {};
+
+const Navbar = (props: Props) => {
   const FramerImage = motion(Image);
   const [isOpen, setIsOpen] = useState(false);
   const [active, setIsActive] = useState("home");
@@ -54,7 +76,6 @@ const Navbar = () => {
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);
   };
-
   return (
     <header className="relative bg-white flex justify-between h-12 rounded-sm  px-2 text-dark">
       {/* Navbar menu for mobiles */}
@@ -65,26 +86,35 @@ const Navbar = () => {
           className="min-w-[70vw] flex flex-col items-center justify-between z-30 py-32 shadow-3xl bg-white/75 text-dark backdrop-blur-md rounded-lg fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
           <nav className="flex flex-col items-center justify-center gap-4">
-            <CustomMobileLink href="#home" title="Home" toggle={handleClick} />
             <CustomMobileLink
+              className=""
+              href="#home"
+              title="Home"
+              toggle={handleClick}
+            />
+            <CustomMobileLink
+              className=""
               href="#about"
               title="About"
               toggle={handleClick}
               active={active}
             />
             <CustomMobileLink
+              className=""
               href="#dailydose"
               title="Daily Dose"
               toggle={handleClick}
               active={active}
             />
             <CustomMobileLink
+              className=""
               href="#situations"
               title="Situations"
               toggle={handleClick}
               active={active}
             />
             <CustomMobileLink
+              className=""
               href="#join"
               title="Join"
               toggle={handleClick}
@@ -118,9 +148,24 @@ const Navbar = () => {
 
       {/* Navbar menu for desktop */}
       <nav className="hidden w-[40%] laptop:flex items-center justify-evenly">
-        <CustomLink href={"#home"} title={"home"} active={active} />
-        <CustomLink href={"#about"} title={"about"} active={active} />
-        <CustomLink href={"#dailydose"} title={"daily dose"} active={active} />
+        <CustomLink
+          className=""
+          href={"#home"}
+          title={"home"}
+          active={active}
+        />
+        <CustomLink
+          className=""
+          href={"#about"}
+          title={"about"}
+          active={active}
+        />
+        <CustomLink
+          className=""
+          href={"#dailydose"}
+          title={"daily dose"}
+          active={active}
+        />
       </nav>
 
       {/* Header logo */}
